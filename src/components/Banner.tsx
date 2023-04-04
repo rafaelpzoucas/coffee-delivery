@@ -1,5 +1,5 @@
 import { Coffee, Package, ShoppingCart, Timer } from '@phosphor-icons/react'
-import bannerImg from '../assets/Bannerimg.png'
+import bannerImg from '../assets/BannerImg.png'
 
 export function Banner() {
     return (
