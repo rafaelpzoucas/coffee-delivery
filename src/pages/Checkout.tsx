@@ -1,5 +1,9 @@
 import { Bank, CreditCard, CurrencyDollar, MapPinLine, Money } from "@phosphor-icons/react";
 import { Input } from "../components/Input";
+import { ProductCard } from "../components/ProductCard";
+import { ProductCardCheckout } from "../components/ProductCardCheckout";
+
+import { coffees } from "../components/OurCoffees";
 
 export function Checkout() {
     return(
@@ -69,13 +73,45 @@ export function Checkout() {
                         </div>
                     </div>
                 </div>
-                <aside className="flex flex-col gap-4">
+                <aside className="flex flex-col gap-4 w-full max-w-md">
                     <h3 className="font-display font-bold text-lg">
                         Cafés selecionados
                     </h3>
 
-                    <div className="flex flex-col p-10 gap-8 rounded-md rounded-tr-[44px] rounded-bl-[44px] bg-[#F3F2F2]">
-                        
+                    <div className="flex flex-col p-10 rounded-md rounded-tr-[44px] rounded-bl-[44px] w-full bg-[#F3F2F2]">
+                        <ProductCardCheckout image={coffees[0].image} name={coffees[0].name} price={coffees[0].price} />
+                        <ProductCardCheckout image={coffees[0].image} name={coffees[0].name} price={coffees[0].price} />
+
+                        <div className="flex flex-col gap-3 py-6">
+                            <div className="flex flex-row justify-between">
+                                <span className="text-sm text-[#574F4D]">
+                                    Total de itens
+                                </span>
+                                <span>
+                                    R$ 29,70
+                                </span>
+                            </div>
+                            <div className="flex flex-row justify-between">
+                                <span className="text-sm text-[#574F4D]">
+                                    Entrega
+                                </span>
+                                <span>
+                                    R$ 9,70
+                                </span>
+                            </div>
+                            <div className="flex flex-row justify-between text-xl">
+                                <strong>
+                                    Entrega
+                                </strong>
+                                <strong>
+                                    R$ 33,70
+                                </strong>
+                            </div>
+                        </div>
+
+                        <button className="px-3 py-2 h-11 rounded-md text-sm text-black bg-[#DBAC2C]">
+                            <strong>CONFIRMAR PEDIDO</strong>
+                        </button>
                     </div>
                 </aside>
             </div>
